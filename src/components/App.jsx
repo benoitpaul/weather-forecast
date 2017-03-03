@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { updateString } from '../reducers/actions.js';
 
-/*global $ getObjectProperties */
+/*global  */
 
 class App extends React.Component {
   constructor(props) {

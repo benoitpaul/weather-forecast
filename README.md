@@ -1,2 +1,2 @@
-# bp-react-seed
-Seed project for react app
+# weather-forecast
+A react based weather forecast app

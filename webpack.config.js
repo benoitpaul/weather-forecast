@@ -1,7 +1,4 @@
 var path = require('path');
-//var webpack = require('webpack');
-const validate = require('webpack-validator');
-
 
 var config = {
     entry: './src/index.js',
@@ -10,16 +7,16 @@ var config = {
         filename: './dist/bundle.js'
     },
     devtool: 'source-map',
-    eslint: {
-        configFile: './.eslintrc'
-    },
     module: {
-        preLoaders: [{
-            test: /\.(js|jsx)$/,
-            exclude: /node_modules/,
-            loader: 'eslint-loader'
-        }, ],
-        loaders: [{
+        rules: [{
+                test: /\.(js|jsx)$/,
+                enforce: "pre",
+                loader: "eslint-loader",
+                options: {
+                    configFile: "./.eslintrc",
+                },
+            },
+            {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader',
                 include: path.join(__dirname, 'src'),
@@ -64,4 +61,4 @@ var config = {
     },
 };
 
-module.exports = validate(config);
+module.exports = config;
