@@ -1,0 +1,46 @@
+.forecastWeather {
+    padding: 32px;
+    // height: 160px;
+}
+
+.condition {
+    height: 96px;
+    width: 96px;
+    filter: brightness(0) invert(1);
+}
+
+.cloudy {
+    composes: condition;
+    background: transparent url('../images/Cloudy.png') no-repeat center center;
+    background-size: contain;
+}
+
+.rainy {
+    composes: condition;
+    background: transparent url('../images/Rainy.png') no-repeat center center;
+    background-size: contain;
+}
+
+.thunderstorm {
+    composes: condition;
+    background: transparent url('../images/Thunderstorms.png') no-repeat center center;
+    background-size: contain;
+}
+
+.snowy {
+    composes: condition;
+    background: transparent url('../images/Snowy.png') no-repeat center center;
+    background-size: contain;
+}
+
+.partlyCloudy {
+    composes: condition;
+    background: transparent url('../images/Cloudy-WithSun.png') no-repeat center center;
+    background-size: contain;
+}
+
+.sunny {
+    composes: condition;
+    background: transparent url('../images/Sunny.png') no-repeat center center;
+    background-size: contain;
+}

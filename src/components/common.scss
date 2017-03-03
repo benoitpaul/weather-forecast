@@ -1,0 +1,19 @@
+.details {
+    display: flex;
+    flex-direction: row;
+}
+
+.conditionsBox {
+    flex: 1;
+    div {
+        font-size: 20px;
+    }
+}
+
+.temperatureBox {
+    width: 80px;
+}
+
+.temperature {
+    font-size: 64px;
+}

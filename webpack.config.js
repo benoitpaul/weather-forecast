@@ -55,7 +55,7 @@ var config = {
             },
             {
                 test: /\.(jpg|png)$/,
-                loader: 'file-loader?name=[path][name].[hash].[ext]'
+                loader: 'file-loader?name=./dist/[name].[hash].[ext]'
             },
         ]
     },

@@ -1,0 +1,31 @@
+.currentWeather {
+    background-color: #5975c5;
+    padding: 32px;
+    flex: 1;
+}
+
+.location {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.dateTime {
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    div {
+        font-size: 20px;
+    }
+}
+
+.dateBox {
+    flex: 1;
+    text-align: left;
+}
+
+.timeBox {
+    width: 80px;
+    text-align: right;
+}

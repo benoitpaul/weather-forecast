@@ -1,1 +1,2 @@
-export const UPDATE_ACTION = 'UPDATE_ACTION';
+export const FETCH_LOCATION = 'FETCH_LOCATION';
+export const FETCH_WEATHER = 'FETCH_WEATHER';

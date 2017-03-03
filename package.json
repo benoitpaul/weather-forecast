@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "./node_modules/.bin/mocha --recursive --require babel-register --reporter spec",
-        "start": "webpack-dev-server --content-base dist/ --progress --colors",
+
+        "start": "webpack-dev-server --open ",
         "watch": "webpack --progress --colors --watch",
         "build": "webpack --progress --colors"
     },
@@ -26,6 +27,7 @@
     },
     "homepage": "https://github.com/benoitpaul/weather-forecast#readme",
     "dependencies": {
+        "axios": "^0.15.3",
         "classnames": "^2.2.5",
         "history": "^4.5.1",
         "react": "^15.4.2",
