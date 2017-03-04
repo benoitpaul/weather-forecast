@@ -15,7 +15,7 @@ function fetchLocation(location) {
 
 function fetchWeather(location) {
     const service = new OpenWeatherMapService();
-    const request = service.getCurrentWeather(location);
+    const request = service.getCurrentWeather(location, 'imperial');
 
     return {
         type: FETCH_WEATHER,

@@ -95,7 +95,7 @@ function getForecast(list, shift) {
     const raw = findForecast(list, date);
     return {
         id: shift,
-        icon: raw.weather[0].main,
+        icon: raw.weather[0].icon,
         high: Math.round(raw.main.temp),
         low: Math.round(raw.main.temp_min),
     };

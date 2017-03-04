@@ -23,7 +23,7 @@ class App extends React.Component {
 
   fetchData() {
       //const zipCode = this.getZipCode();
-      this.props.fetchLocation();
+      this.props.fetchLocation('Atlanta');
       this.props.fetchWeather("10001");
     }
 

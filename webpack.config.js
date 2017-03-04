@@ -2,9 +2,15 @@ var path = require('path');
 
 var config = {
     entry: './src/index.js',
+    /*
     output: {
         path: __dirname,
         filename: './dist/bundle.js'
+    },
+    */
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: 'bundle.js'
     },
     devtool: 'source-map',
     module: {
@@ -55,7 +61,7 @@ var config = {
             },
             {
                 test: /\.(jpg|png)$/,
-                loader: 'file-loader?name=./dist/[name].[hash].[ext]'
+                loader: 'file-loader?name=[name].[hash].[ext]'
             },
         ]
     },

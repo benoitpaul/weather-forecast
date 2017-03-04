@@ -7,25 +7,28 @@ import commonStyles from './common.scss';
 function ForecastWeather({backgroundColor, forecastWeather}) {
     const forecastWeatherStyle = {
         backgroundColor: backgroundColor
-    }
+    };
 
     let getConditionClassname = function(icon) {
         switch (icon) {
-            case 'cloudy':
+            case '03d':
+            case '04d':
                 return styles.cloudy;
-            case 'rainy':
+            case '09d':
+            case '10d':
+            case '50d':
                 return styles.rainy;
-            case 'thunderstorm':
+            case '11d':
                 return styles.thunderstorm;
-            case 'snowy':
+            case '13d':
                 return styles.snowy;
-            case 'partly_cloudy':
+            case '02d':
                 return styles.partlyCloudy;
-            case 'sunny':
+            case '01d':
             default:
                 return styles.sunny;
         }
-    }
+    };
 
     const conditionClassname = getConditionClassname(forecastWeather.icon);
 
