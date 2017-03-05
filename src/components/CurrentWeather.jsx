@@ -20,8 +20,8 @@ function CurrentWeather({location, currentWeather}) {
             <div className={commonStyles.details}>
                 <div className={commonStyles.conditionsBox}>
                     <div>Feels like {currentWeather.feelsLike}&deg;</div>
-                    <div>H-L {currentWeather.high}&deg;-{currentWeather.low}&deg;</div>
-                    <div>UV Index {currentWeather.uvIndex}</div>
+                    <div>H-L {currentWeather.high}&deg; - {currentWeather.low}&deg;</div>
+                    <div>UV Index {currentWeather.uvIndex} of 10</div>
                     <div>Wind {currentWeather.wind.direction} {currentWeather.wind.speed}mph</div>
                 </div>
                 <div className={commonStyles.temperatureBox}>

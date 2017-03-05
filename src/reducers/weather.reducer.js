@@ -87,7 +87,6 @@ function extractForecastWeather(data) {
         forecastWeather[i] = getForecast(data.forecastWeather.list, i + 1);
     }
     return forecastWeather;
-
 }
 
 function getForecast(list, shift) {
@@ -96,8 +95,8 @@ function getForecast(list, shift) {
     return {
         id: shift,
         icon: raw.weather[0].icon,
-        high: Math.round(raw.main.temp),
-        low: Math.round(raw.main.temp_min),
+        temperature: Math.round(raw.main.temp),
+        humidity: Math.round(raw.main.humidity),
     };
 }
 

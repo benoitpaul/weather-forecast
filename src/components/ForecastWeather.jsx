@@ -39,8 +39,8 @@ function ForecastWeather({backgroundColor, forecastWeather}) {
                     <div className={conditionClassname} />
                 </div>
                 <div className={commonStyles.temperatureBox}>
-                    <div className={commonStyles.temperature}>{forecastWeather.high}&deg;</div>
-                    <div>LOW {forecastWeather.low}&deg;</div>
+                    <div className={commonStyles.temperature}>{forecastWeather.temperature}&deg;</div>
+                    <div>{forecastWeather.humidity}%</div>
                 </div>
             </div>
         </div>);

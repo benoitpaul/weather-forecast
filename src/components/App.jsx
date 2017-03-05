@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchLocation, fetchWeather } from '../reducers/actions.js';
+import { fetchData } from '../reducers/actions.js';
 
 import layout from './layout.scss';
 import CurrentWeather from './CurrentWeather.jsx';
@@ -22,10 +22,8 @@ class App extends React.Component {
   }
 
   fetchData() {
-      //const zipCode = this.getZipCode();
-      this.props.fetchLocation('Atlanta');
-      this.props.fetchWeather("10001");
-    }
+    this.props.fetchData("Atlanta");
+  }
 
   render() {
     if (!this.props.weather) {
@@ -53,8 +51,7 @@ App.propTypes = {
     forecast: React.PropTypes.array
   }),
 
-  fetchLocation: React.PropTypes.func.isRequired,
-  fetchWeather: React.PropTypes.func.isRequired,
+  fetchData: React.PropTypes.func,
 };
 
 const mapStateToProps = (state) => {
@@ -65,7 +62,7 @@ const mapStateToProps = (state) => {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchLocation, fetchWeather }, dispatch);
+  return bindActionCreators({ fetchData }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

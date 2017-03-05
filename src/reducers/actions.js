@@ -12,10 +12,9 @@ function fetchLocation(location) {
     };
 }
 
-
-function fetchWeather(location) {
+function fetchWeather(latitude, longitude) {
     const service = new OpenWeatherMapService();
-    const request = service.getCurrentWeather(location, 'imperial');
+    const request = service.getCurrentWeatherByCoordinate(latitude, longitude, 'imperial');
 
     return {
         type: FETCH_WEATHER,
@@ -23,4 +22,13 @@ function fetchWeather(location) {
     };
 }
 
-export { fetchLocation, fetchWeather };
+function fetchData(location) {
+    return (dispatch, getState) => {
+        return dispatch(fetchLocation(location)).then(() => {
+            const fetchedLocation = getState().location;
+            return dispatch(fetchWeather(fetchedLocation.latitude, fetchedLocation.longitude));
+        });
+    }
+}
+
+export { fetchData };

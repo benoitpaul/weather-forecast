@@ -18,4 +18,20 @@ export default class OpenWeatherMapService {
             }
         });
     }
+
+    getCurrentWeatherByCoordinate(latitude, longitude, units) {
+        const CURRENT_BASE_URL = 'http://api.openweathermap.org/data/2.5/weather?';
+        const FORECAST_BASE_URL = 'http://api.openweathermap.org/data/2.5/forecast?';
+
+        //imperial
+        const currentUrl = `${CURRENT_BASE_URL}lat=${latitude}&lon=${longitude}&units=${units}&appid=${OPEN_WEATHER_MAP_API_KEY}`;
+        const forecastUrl = `${FORECAST_BASE_URL}lat=${latitude}&lon=${longitude}&units=${units}&appid=${OPEN_WEATHER_MAP_API_KEY}`;
+
+        return Promise.all([axios.get(currentUrl), axios.get(forecastUrl)]).then((values) => {
+            return {
+                currentWeather: values[0].data,
+                forecastWeather: values[1].data
+            }
+        });
+    }
 }
