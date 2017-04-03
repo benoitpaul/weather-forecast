@@ -3,11 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchData } from '../reducers/actions.js';
 
-import layout from './layout.scss';
-import CurrentWeather from './CurrentWeather.jsx';
-import ForecastWeather from './ForecastWeather.jsx';
-
-const FORECAST_BACKGROUND_COLORS = ["#89b0ee", "#b3d4f6", "#3c438b", "#18173a"];
+import SmallWidget from './SmallWidget/SmallWidget.jsx';
+import MediumWidget from './MediumWidget/MediumWidget.jsx';
 
 /*global  */
 
@@ -30,15 +27,10 @@ class App extends React.Component {
       return <div>Loading...</div>;
     }
 
-    const forecasts = this.props.weather.forecast.map((f, index) => {
-      const backgroundColor = FORECAST_BACKGROUND_COLORS[index]
-      return <ForecastWeather key={f.id} backgroundColor={backgroundColor} forecastWeather={f} />
-    });
-
     return (
       <div>
-        <CurrentWeather className={layout.content} location={this.props.location} currentWeather={this.props.weather.current} />
-        {forecasts}
+        <SmallWidget location={this.props.location} weather={this.props.weather} />
+        <MediumWidget location={this.props.location} weather={this.props.weather} />
       </div>
     );
   }

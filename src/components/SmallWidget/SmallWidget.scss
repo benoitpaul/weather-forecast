@@ -1,0 +1,9 @@
+.smallWidget {
+    display: none;
+}
+
+@media only screen and (max-device-width: 768px) {
+    .smallWidget {
+        display: block;
+    }
+}
