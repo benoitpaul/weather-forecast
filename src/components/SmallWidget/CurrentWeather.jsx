@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 
 import styles from './CurrentWeather.scss';
-import commonStyles from './common.scss';
+import commonStyles from './SmallWidget.scss';
 
 
 function CurrentWeather({location, currentWeather}) {

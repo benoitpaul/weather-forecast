@@ -1,6 +1,6 @@
 .currentWeather {
+    composes: smallWidgetRow from "./SmallWidget.scss";
     background-color: #5975c5;
-    padding: 32px;
     flex: 1;
 }
 

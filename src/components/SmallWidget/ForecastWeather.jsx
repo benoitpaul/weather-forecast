@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './ForecastWeather.scss';
-import commonStyles from './common.scss';
+import commonStyles from './SmallWidget.scss';
 
 
 function ForecastWeather({backgroundColor, forecastWeather}) {

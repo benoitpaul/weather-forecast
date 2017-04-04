@@ -1,11 +1,10 @@
 .forecastWeather {
-    padding: 32px;
-    // height: 160px;
+    composes: smallWidgetRow from "./SmallWidget.scss";
 }
 
 .condition {
-    height: 96px;
-    width: 96px;
+    height: 64px;
+    width: 64px;
     filter: brightness(0) invert(1);
 }
 

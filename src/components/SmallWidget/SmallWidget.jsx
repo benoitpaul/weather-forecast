@@ -1,7 +1,6 @@
 import React from 'react';
 import CurrentWeather from './CurrentWeather.jsx';
 import ForecastWeather from './ForecastWeather.jsx';
-import layout from './layout.scss';
 import styles from './SmallWidget.scss';
 
 const FORECAST_BACKGROUND_COLORS = ["#89b0ee", "#b3d4f6", "#3c438b", "#18173a"];
@@ -14,7 +13,7 @@ function SmallWidget({ location, weather }) {
 
     return (
         <div className={styles.smallWidget}>
-            <CurrentWeather className={layout.content} location={location} currentWeather={weather.current} />
+            <CurrentWeather location={location} currentWeather={weather.current} />
             {forecasts}
         </div>
     );
